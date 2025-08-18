@@ -1,0 +1,58 @@
+/* Arka plan */
+body {
+  margin: 0;
+  background-image: url('arkaplan.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Şiir kutusu */
+.poem {
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* Şiir kutuları arasında ~2 satır boşluk */
+.poem + .poem {
+  margin-top: 2em;
+}
+
+/* İki sütun düzeni (varsa) */
+.poem-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* dar ekranda alta geçsin */
+}
+
+/* Sütun metni (varsa) */
+.poem-text {
+  width: 48%;
+  white-space: pre-line;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Sağ sütun Arapça ise */
+.poem-text.right {
+  text-align: right;
+  direction: rtl;
+}
+
+/* <pre> içindeki şiirler için (monospace yerine normal font, satır kaybı olmasın) */
+.poem pre {
+  margin: 0;
+  white-space: pre-wrap;   /* satır sonlarını koru + taşı */
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;        /* istersen justify yapabilirsin */
+}
+
+/* Şair adı: bold + italik (HTML'de <span class="author"> ... </span>) */
+.author {
+  font-weight: 700;
+  font-style: italic;
+}
